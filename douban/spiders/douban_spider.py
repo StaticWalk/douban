@@ -31,6 +31,5 @@ class DoubanSpiderSpider(scrapy.Spider):
             next_link = next_link[0]
             yield scrapy.Request("https://movie.douban.com/top250"+next_link,callback=self.parse)
 
-            # 数据存放到mongodb中
             print(douban_item)
 

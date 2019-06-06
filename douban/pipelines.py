@@ -17,6 +17,7 @@ class DoubanPipeline(object):
         mydb = client[dbname]
         self.post = mydb[sheetname]
 
+    # 数据存放到mongodb中
     def process_item(self, item, spider):
         data = dict(item)
         self.post.insert(data)
